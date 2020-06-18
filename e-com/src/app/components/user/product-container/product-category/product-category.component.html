@@ -1,0 +1,17 @@
+<div class="list-group">
+    <a 
+        class="list-group-item list-group-item-action active"
+        (click)="showProductByCategory()"
+    >
+       All Product
+    </a>
+
+    <a 
+    (click)="showProductByCategory(data.id)"  
+    class="list-group-item list-group-item-action"
+    *ngFor="let data of category.data"
+    data-target="{{data.id}}"
+    >
+       {{ data.category_name | titlecase }}
+    </a>
+</div>

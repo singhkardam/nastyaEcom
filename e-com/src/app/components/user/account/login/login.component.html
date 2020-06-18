@@ -1,0 +1,35 @@
+<section class="testimonial py-5" id="testimonial">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 py-5 bg-primary text-white text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                        <h2 class="py-3">Login</h2>
+                        <p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque an per, lucilius pertinacia eu vel.
+
+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 border">
+                <h4 class="pb-4">Please fill your login details</h4>
+                <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <input type="email" formControlName="email" class="form-control" id="loginEmail" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="loginPassword" formControlName="pass" name="password" placeholder="Password" class="form-control" required="required" type="password">
+                        </div>
+                      </div>
+                    
+                    <div class="form-row">
+                        <button type="button" class="btn btn-danger" type="submit">Submit</button>
+                        <span class="haveAnAccount"> Not a registered member <a routerLink="/account/registration">click here</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

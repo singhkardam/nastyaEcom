@@ -1,0 +1,26 @@
+<div class="">     
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>mobileNumber</th>
+          <th>email</th>
+          <th>dateTime</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of getUser.data">
+          <td>{{data.id}}</td>
+          <td>{{data.name}}</td>
+          <td>{{data.mobileNumber}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.datetime | slice :0:10}}</td>
+          <td>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,40 @@
+{
+  "products":[
+    {
+      "id": 1,
+      "name": "Black Shoes",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc",
+      "price": 100,
+      "imageUrl": "https://5.imimg.com/data5/FX/AW/MY-3190658/red-chief-formal-shoes-500x500.jpg"      
+    },
+    {
+      "id": 2,
+      "name": "Red Shoes",
+      "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000  is not simply random text. It has roots in a piece of classical Latin li",
+      "price": 200,
+      "imageUrl": "https://m.media-amazon.com/images/I/71RV-BW1vqL._SR500,500_.jpg"      
+    },
+    {
+      "id": 3,
+      "name": "Red Shoes",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered e are many variations of passages of Lorem Ipsum available ",
+      "price": 300,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoutmYEOU5WbpmHddRn0DUVGE39KTVDpjVWYXcdIHJH6U0N_pp&usqp=CAU"      
+    },
+    {
+      "id": 5,
+      "name": "Black Shoes",
+      "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced ndard chunk of Lorem Ipsum used since the 1500s is ndard chunk of Lorem Ipsum used since the 1500s is ndard chunk of Lorem Ipsum used since the 1500s is ",
+      "price": 500,
+      "imageUrl": "https://img1.cfcdn.club/ca/2d/ca7f64f504a156abc90014adea44932d_350x350.jpg"      
+    },
+    {
+      "id": 6,
+      "name": "Girl Shoes",
+      "description": "by Cicero are also reproduced in their exact original form, accompanied by English  reproduced in their exact original form  reproduced in their exact original form,",
+      "price": 600,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTCFOOUipxM4eYWpfw9xvtTjAEsZmtXNr8dzDZZP5auSfhGM6s4&usqp=CAU"      
+    }   
+  ],
+  "cart":[]
+}

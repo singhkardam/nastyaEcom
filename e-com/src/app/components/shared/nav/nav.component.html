@@ -1,0 +1,37 @@
+<nav class="my-2 my-md-0 mr-md-3 d-flex align-items-center">
+    
+    <a class="p-2 text-dark" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact:true}"
+        routerLink="">
+        <span class="material-icons">home</span>
+    </a>
+    <a class="p-2 text-dark" routerLink="">
+        <span class="material-icons">shopping_cart</span>
+    </a>
+        
+    <a class="p-2 text-dark" routerLinkActive="active" routerLink="/product">Products</a>
+    <a class="p-2 text-dark" routerLink="/account/dashboard" *ngIf="auth.isLoggedIn()">My Account</a>
+
+    <a 
+    class="btn btn-outline-primary" 
+    routerLink="account/registration"
+    *ngIf="!auth.isLoggedIn()"
+    >Sign up</a>
+    <a 
+    class="userName"  
+    id="navbardrop" 
+    data-toggle="dropdown"
+    *ngIf="auth.isLoggedIn()"
+    >
+          {{loginName | slice:0:1 | titlecase }}
+    </a>
+    <div class="dropdown-menu" data-toggle="dropdown">
+        <a class="dropdown-item" href="javascript:void(0);">Purchase History</a>
+        <a class="dropdown-item" href="javascript:void(0);">Account</a>
+        <a class="dropdown-item" routerLink="account/dashboard/wish-list">Wish List</a>
+        <a class="dropdown-item" href="javascript:void(0);" (click)="logOut()">Logout</a>
+    </div>
+
+
+</nav>

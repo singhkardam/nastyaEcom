@@ -1,0 +1,10 @@
+.haveAnAccount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+    padding-left: 15px; 
+    a{
+        padding-left: 5px;
+    }
+}

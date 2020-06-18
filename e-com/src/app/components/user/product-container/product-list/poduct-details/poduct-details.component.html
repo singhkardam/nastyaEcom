@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card">
+        <span><button type="button" class="btn btn-link" (click)="backPage();">Back to All Product</button></span>
+        <div class="container-fliud">
+            <div class="wrapper row" *ngIf="selectedItem">
+                <div class="preview col-md-4">
+                    <div class="preview-pic tab-content">
+                      <div class="tab-pane active" id="pic-1">
+                          <img src="{{selectedItem.imageUrl}}" width="250" height="250"/>
+                      </div>
+                    </div>
+                </div>
+                <div class="details col-md-8">
+                    <h3 class="product-title">{{selectedItem.name}} {{selectedItem.id}}</h3>
+                    <p class="product-description text-justify">{{selectedItem.description}}</p>
+                    <h5 class="price">price: <span>{{selectedItem.price | currency : 'INR'}}</span></h5>
+                    <div class="action">
+                        <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+
+
+
+<div class="row">
+    <div class="col-md-4" *ngFor="let data of product.data">
+        <div class="card card-product mb-4">
+        <a routerLink="/product-details/{{data.id}}">
+            <figure class="">
+                <div class="img-wrap">
+                    <img src="{{ data.imageUrl }}" class="w-75">
+                </div>
+                <figcaption class="info-wrap">
+                        <h4 class="title">{{ data.name | titlecase }}</h4>
+                        <p class="desc">{{ data.description | slice:0:25 }}</p>
+                </figcaption>
+            </figure>
+        </a>
+        <div class="bottom-wrap">
+            <div>
+            <button 
+            class="btn btn-sm btn-primary"
+            type="button"
+            (click)="addToCart($event)"
+            >Add To Cart</button>	
+            </div>  
+
+            <div class="price-wrap h5">
+                
+                <span *ngIf="data.wishList" class="d-flex">
+                    <span 
+                    class="material-icons icon-blue cursor-pointer"
+                    [class.active]="data.wishList"
+                    (click)="alreadyAdded()"
+                    >
+                    {{ wishListStatus ? 'favorite' : 'favorite' }}
+                    </span>
+                </span>
+
+                <span *ngIf="!data.wishList" class="d-flex">
+                    <span 
+                    class="material-icons icon-blue cursor-pointer"
+                    (click)="addToWishList($event)"
+                    [attr.data-id]="data.id"
+                    [attr.data-item-id]="data.wishList"
+                    [class.active]="data.wishList"
+                    >
+                    {{ wishListStatus ? 'favorite_border' : 'favorite_border' }}
+                    </span>
+                </span>
+                
+
+
+                <span class="price-new">{{ data.price | currency : 'INR' }}</span>
+            </div> <!-- price-wrap.// -->
+        </div> <!-- bottom-wrap.// -->
+        </div>
+    </div> <!-- col // -->
+</div>
+

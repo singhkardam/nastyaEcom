@@ -1,0 +1,56 @@
+<div class="alert alert-success alert-dismissible" *ngIf="succesMessage">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Success!</strong> Added Product Succesfully
+</div>
+<form class="form-inline" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <input 
+    type="text" 
+    class="form-control" 
+    id="" 
+    placeholder="product name" 
+    name="name"
+    formControlName="name">
+
+    <select 
+    class="form-control" 
+    name="category_id"
+    formControlName="category_id">
+        <option value="" disabled>product category</option>
+        <option 
+        *ngFor="let i of getcategory.data" 
+        [ngValue]="i.id">{{i.category_name}}</option>
+    </select>
+
+    <input 
+    type="number" 
+    class="form-control productPrice" 
+    id="" 
+    placeholder="product price" 
+    name="price"
+    formControlName="price">
+
+    <input 
+    type="text" 
+    class="form-control" 
+    id="" 
+    placeholder="imageUrl" 
+    name="imageUrl"
+    formControlName="imageUrl">
+
+    <input 
+    type="number" 
+    class="form-control" 
+    id="" 
+    placeholder="Qty" 
+    name="qty"
+    formControlName="qty">
+    
+    <textarea 
+    class="form-control" 
+    rows="5"
+    placeholder="Enter product description here.."
+    name="description"
+    formControlName="description"
+    ></textarea>
+    <button type="button" class="btn btn-primary" type="submit">Submit</button>
+</form>

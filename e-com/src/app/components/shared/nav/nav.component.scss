@@ -1,0 +1,15 @@
+.userName{
+    background: #686f7a;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;    
+    cursor: pointer; 
+}
+.active{
+    background: #e9ecef;    
+}
